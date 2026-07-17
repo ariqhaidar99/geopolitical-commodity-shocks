@@ -7,7 +7,7 @@ An empirical, multi-stage quantitative model analyzing price transmission elasti
 ---
 
 ## 📌 Analytical Framework
-Modern agricultural yields rely heavily on energy-intensive chemical synthesis (the Haber-Bosch process for nitrogenous fertilizers). This repository hosts an end-to-end pipeline constructed entirely in **native Base R** to prove two key structural theses:
+Modern agricultural yields rely heavily on energy-intensive chemical synthesis (the Haber-Bosch process for nitrogenous fertilizers). This repository hosts an end-to-end pipeline constructed entirely in native Base R to prove two key structural theses:
 1. **The Cost Transmission Channel:** Upstream energy shocks (Crude Oil & Natural Gas) pass directly into intermediate fertilizers (Urea, DAP), dictating final grain staple prices (Maize, Wheat, Rice).
 2. **The Intensification Dilemma:** Agricultural expansion (extensification via land use) has historically remained flat and shows a near-zero correlation with actual global food security, which remains bound to fertilizer-driven crop yields (intensification).
 
@@ -18,7 +18,16 @@ Modern agricultural yields rely heavily on energy-intensive chemical synthesis (
 ### 1. The Global Price Transmission Network
 By calculating Pearson correlation coefficients across 13 distinct asset classes, the macro network illustrates a powerful relationship running from upstream inputs to retail commodities. High-density connections ($r > 0.85$) bind European Natural Gas directly to Urea synthesis and Maize pricing.
 
-### 2. Crop Yields vs. Fertilizer Intensification
+![Price Transmission Heatmap](outputs/figures/agricultural_correlation_heatmap.png)
+
+### 2. Historical Shock Comparison: Pre vs. Peak Prices
+To ground this framework in historical precedents, this panel benchmarks baseline pricing environments against peak crisis metrics across core commodity layers during the **2008 Financial Crisis** and the **2022 Russia-Ukraine War**. The visualization illustrates exactly how downstream crop assets and intermediate inputs mirror major upstream energy disruptions during a systemic supply shock.
+
+![Historical Shock Comparison](outputs/figures/hormuz_core_shocks.png)
+
+### 3. Crop Yields vs. Fertilizer Intensification
 Using raw global agricultural data from 1961 to the present, our visualization confirms that staple yields closely track raw chemical nutrient applications, while showing independent movements relative to changes in land boundaries.
+
+![Fertilizer and Crop Yield Correlation](outputs/figures/crop_yield_vs_fertilizer.png)
 
 ---
