@@ -1,5 +1,5 @@
 # ==============================================================================
-# Script: 02_world_bank_pipeline.R
+# Script: 03_world_bank_energy_fertilizers_crops_pipeline.R
 # Author: Ariq Haidar
 # Description: Cleans the World Bank Pink Sheet commodity prices and plots the 
 #              correlation matrix.
