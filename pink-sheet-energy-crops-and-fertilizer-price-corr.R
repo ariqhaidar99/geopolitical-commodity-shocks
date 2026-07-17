@@ -1,8 +1,8 @@
 # ==============================================================================
 # Script: 02_world_bank_pipeline.R
 # Author: Ariq Haidar
-# Description: Cleans the World Bank Pink Sheet commodity prices and plots correlation 
-#              matrix. Built entirely using native Base R.
+# Description: Cleans the World Bank Pink Sheet commodity prices and plots the 
+#              correlation matrix.
 # ==============================================================================
 
 # --- 1. Load Raw Pink Sheet Dataset ---
@@ -129,8 +129,11 @@ text(bar_x_right + 0.8, n_vars / 2, labels = "Correlation Value", srt = 270, xpd
 title(main = "Correlation Between Energy Prices, Fertilizer Prices, and Crop Prices", 
       line = 1.5, cex.main = 1.0, font.main = 2)
 
-# --- 7. Historical Shock Analysis (ft. ggplot2) ---
+# --- 7. Historical Shock Analysis (ft. tidyverse and ggplot2) ---
 message("Processing historical baseline shock data panel...")
+install.packages(c("tidyverse", "ggplot2"))
+library(tidyverse)
+library(ggplot2)
 
 # Create fake Date index from your clean year_month column for alignment plotting
 wb_selected$Date <- as.Date(paste0(gsub("M", "-", wb_selected$year_month), "-01"), format = "%Y-%m-%d")
