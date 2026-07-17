@@ -1,8 +1,9 @@
 # ==============================================================================
-# Script: 01_owid_yield_analysis.R
+# Title: OWID Yield Analysis
 # Author: Ariq Haidar
-# Description: Analyzes global crop yields, fertilizer inputs, and land use.
-#              Built entirely using native Base R.
+# Description: Chapter 1a - Ingests and processes Our World in Data (OWID) crop
+#              yield profiles to map global agricultural productivity baselines
+#              and baseline vulnerabilities.
 # ==============================================================================
 
 # --- 1. Fetch Datasets (OWID JSON APIs) ---
@@ -71,8 +72,8 @@ dir.create("outputs/tables", showWarnings = FALSE, recursive = TRUE)
 write.csv(cor_matrix_owid, "fertilizer_crops_correlation_matrix.csv", row.names = TRUE)
 
 # ==============================================================================
-# Script: 02_owid_plot_heatmap_simple.R
-# Description: Plots correlation matrix CSV exactly as it is. 
+# Title: OWID Corr Heatmap Plotting
+# Description: Chapter 1b - Plots correlation matrix CSV exactly as it is. 
 #              Zero external packages required.
 # ==============================================================================
 
