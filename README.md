@@ -18,7 +18,7 @@ By calculating Pearson correlation coefficients across 14 distinct asset classes
 ![Price Transmission Heatmap](energy%20price%20fertilizer%20price%20crop%20price.png)
 
 ### 2. Historical Shock Comparison: Pre vs. Peak Prices
-To ground this framework in historical precedents, this panel benchmarks baseline pricing environments against peak crisis metrics across core commodity layers during the **2008 Financial Crisis** and the **2022 Russia-Ukraine War**. The visualization illustrates exactly how downstream crop assets and intermediate inputs mirror major upstream energy disruptions during a systemic supply shock.
+To compare this framework in historical precedents, this panel benchmarks baseline pricing environments against peak crisis metrics across core commodity layers during the **2008 Financial Crisis** and the **2022 Russia-Ukraine War**. The visualization illustrates exactly how downstream crop assets and intermediate inputs mirror major upstream energy disruptions during a systemic supply shock.
 
 ![Historical Shock Comparison](previous_shocks.png)
 
