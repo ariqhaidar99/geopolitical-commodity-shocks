@@ -1,5 +1,4 @@
-# README
-# geopolitical-commodity-shocks
+# Geopolitical Commodity Shocks
 
 An empirical, multi-stage quantitative model analyzing price transmission elasticities across the global energy-fertilizer-food value chain using 60+ years of World Bank "Pink Sheet" and Our World in Data (OWID) historical records. 
 
