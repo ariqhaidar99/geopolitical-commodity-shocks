@@ -1,5 +1,5 @@
 # ==============================================================================
-# Script: 03_world_bank_pipeline.R
+# Script: 02_world_bank_pipeline.R
 # Author: Ariq Haidar
 # Description: Cleans the World Bank Pink Sheet commodity prices and plots correlation 
 #              matrix. Built entirely using native Base R.
@@ -66,14 +66,10 @@ message("Calculating correlation coefficients...")
 # Calculate Pearson correlations using only our numeric commodity columns
 cor_matrix_wb <- cor(wb_selected[, commodity_cols], use = "complete.obs")
 
-# --- 4. Calculate Correlation Matrix ---
-message("Calculating correlation coefficients...")
+# --- 5. Save Correlation Matrix CSV ---
+write.csv(cor_matrix_wb, "energy price, fertilizer price, crop price pink sheet matrix.csv")
 
-# Calculate Pearson correlations using only our numeric commodity columns
-cor_matrix_wb <- cor(wb_selected[, commodity_cols], use = "complete.obs")
-
-
-# --- 5. Plot Interactive Heatmap ---
+# --- 6. Plot Interactive Heatmap ---
 message("Plotting interactive heatmap...")
 
 # Extract dimensions and ranges for plotting
@@ -108,7 +104,7 @@ for (x in 1:n_vars) {
   }
 }
 
-# --- 6. Draw the Legend (Color Bar) on the Right Side ---
+# Draw the Legend (Color Bar) on the Right Side
 bar_x_left  <- n_vars + 0.8
 bar_x_right <- n_vars + 1.2
 y_steps     <- seq(1, n_vars, length.out = 101)
@@ -129,6 +125,39 @@ text(bar_x_right + 0.15, tick_y, labels = sprintf("%.2f", tick_vals), adj = 0, x
 # Legend title
 text(bar_x_right + 0.8, n_vars / 2, labels = "Correlation Value", srt = 270, xpd = TRUE, cex = 0.9, font = 2)
 
-# --- 7. Add Main Title ---
+# Add Main Title 
 title(main = "Correlation Between Energy Prices, Fertilizer Prices, and Crop Prices", 
       line = 1.5, cex.main = 1.0, font.main = 2)
+
+# 3. Historical Shock Analysis (ft. ggplot2) ---
+message("Processing historical baseline shock data panel...")
+
+# Create fake Date index from your clean year_month column for alignment plotting
+wb_selected$Date <- as.Date(paste0(gsub("M", "-", wb_selected$year_month), "-01"), format = "%Y-%m-%d")
+
+# Filter for pre and peak window baseline periods
+shocks2 <- wb_selected %>%
+  filter(year_month %in% c("2007M08", "2008M07", "2022M02", "2022M03")) %>%
+  mutate(
+    Shock = c("2008 Pre", "2008 Peak", "2022 Pre", "2022 Peak")
+  ) %>%
+  select(year_month, Date, Shock, `Brent Crude`, `Japan LNG`, `Urea (Nitrogen)`, `Maize`, `SRW Wheat`, `HRW Wheat`)
+
+# Pivot longer for facet grouping layout
+shocks_long2 <- shocks2 %>% 
+  pivot_longer(-c(year_month, Date, Shock), names_to = "Commodity")
+
+# Generate the multi-panel facet line chart
+# Using Base R's native gsub and grepl to bypass any missing stringr library constraints
+ggplot(shocks_long2, aes(x = Date, y = value, 
+                         color = gsub(" Peak| Pre", "", Shock), 
+                         group = interaction(Commodity, gsub(" Peak| Pre", "", Shock)))) + 
+  geom_line(linewidth = 1.2) + 
+  geom_point(size = 4, aes(shape = if_else(grepl("Peak", Shock), "Peak", "Pre"))) + 
+  facet_wrap(~Commodity, scales = "free_y") + 
+  scale_shape_manual(values = c("Pre" = 1, "Peak" = 16)) + 
+  labs(title = "Commodity Shock Comparison: Pre vs. Peak Baseline Prices",
+       subtitle = "2008 Financial Crisis Scenario vs. 2022 Russia-Ukraine Corridor Disruptions",
+       color = "Crisis Event",
+       shape = "Market State") + 
+  theme_minimal()
