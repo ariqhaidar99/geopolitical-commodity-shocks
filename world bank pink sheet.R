@@ -55,18 +55,18 @@ for (col in commodity_cols) {
   wb_selected[[col]] <- clean_numeric(wb_selected[[col]])
 }
 
-# Keep the date column as a clean character string
+# --- 4. Keep the date column as a clean character string --- 
 wb_selected$year_month <- as.character(wb_selected$year_month)
 write.csv(wb_selected, "CMO-Historical-Data-Monthly-Jul-26 - Cleaned Monthly Prices.csv", row.names = FALSE)
 message("Clean dataset saved.")
 
-# --- 4. Calculate Correlation Matrix ---
+# --- 5. Calculate Correlation Matrix ---
 message("Calculating correlation coefficients...")
 
 # Calculate Pearson correlations using only our numeric commodity columns
 cor_matrix_wb <- cor(wb_selected[, commodity_cols], use = "complete.obs")
 
-# --- 5. Save Correlation Matrix CSV ---
+# Save Correlation Matrix CSV ---
 write.csv(cor_matrix_wb, "energy price, fertilizer price, crop price pink sheet matrix.csv")
 
 # --- 6. Plot Interactive Heatmap ---
@@ -129,7 +129,7 @@ text(bar_x_right + 0.8, n_vars / 2, labels = "Correlation Value", srt = 270, xpd
 title(main = "Correlation Between Energy Prices, Fertilizer Prices, and Crop Prices", 
       line = 1.5, cex.main = 1.0, font.main = 2)
 
-# 3. Historical Shock Analysis (ft. ggplot2) ---
+# --- 7. Historical Shock Analysis (ft. ggplot2) ---
 message("Processing historical baseline shock data panel...")
 
 # Create fake Date index from your clean year_month column for alignment plotting
