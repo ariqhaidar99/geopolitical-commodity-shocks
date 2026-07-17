@@ -1,4 +1,5 @@
-# macro-commodity-transmission
+# README
+# geopolitical-commodity-shocks
 
 An empirical, multi-stage quantitative model analyzing price transmission elasticities across the global energy-fertilizer-food value chain using 60+ years of World Bank "Pink Sheet" and Our World in Data (OWID) historical records. 
 
@@ -18,16 +19,14 @@ Modern agricultural yields rely heavily on energy-intensive chemical synthesis (
 ### 1. The Global Price Transmission Network
 By calculating Pearson correlation coefficients across 13 distinct asset classes, the macro network illustrates a powerful relationship running from upstream inputs to retail commodities. High-density connections ($r > 0.85$) bind European Natural Gas directly to Urea synthesis and Maize pricing.
 
-*   🔗 **[View Price Transmission Heatmap Matrix](energy%20price%20fertilizer%20price%20crop%20price.png)**
+![Price Transmission Heatmap](energy%20price%20fertilizer%20price%20crop%20price.png)
 
 ### 2. Historical Shock Comparison: Pre vs. Peak Prices
 To ground this framework in historical precedents, this panel benchmarks baseline pricing environments against peak crisis metrics across core commodity layers during the **2008 Financial Crisis** and the **2022 Russia-Ukraine War**. The visualization illustrates exactly how downstream crop assets and intermediate inputs mirror major upstream energy disruptions during a systemic supply shock.
 
-![Historical Shock Comparison](figures/hormuz_core_shocks.png)
+![Historical Shock Comparison](previous_shocks.png)
 
 ### 3. Crop Yields vs. Fertilizer Intensification
 Using raw global agricultural data from 1961 to the present, our visualization confirms that staple yields closely track raw chemical nutrient applications, while showing independent movements relative to changes in land boundaries.
 
-![Fertilizer and Crop Yield Correlation](crop_yield_vs_fertilizer.png)
-
----
+![Fertilizer and Crop Yield Correlation](fertilzer%20use%20land%20use%20crop%20yield%20owid.png)
