@@ -71,7 +71,7 @@ dir.create("outputs/tables", showWarnings = FALSE, recursive = TRUE)
 write.csv(cor_matrix_owid, "fertilizer_crops_correlation_matrix.csv", row.names = TRUE)
 
 # ==============================================================================
-# Script: 02_plot_heatmap_simple.R
+# Script: 02_owid_plot_heatmap_simple.R
 # Description: Plots correlation matrix CSV exactly as it is. 
 #              Zero external packages required.
 # ==============================================================================
