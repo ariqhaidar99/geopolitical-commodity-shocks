@@ -1,8 +1,10 @@
 # ==============================================================================
-# Script: 03_world_bank_energy_fertilizers_crops_pipeline.R
+# Title: World Bank Pink Sheet Energy, Fertilizer, and Crop Prices Analysis 
 # Author: Ariq Haidar
-# Description: Cleans the World Bank Pink Sheet commodity prices and plots the 
-#              correlation matrix.
+# Description: Chapter 1c - Filters World Bank "Pink Sheet" historical series
+#              to quantify agricultural price transmission, fertilizer input 
+#              dependencies, and geopolitical shock panels.
+# Packages Required: tidyverse and ggplot2
 # ==============================================================================
 
 # --- 1. Load Raw Pink Sheet Dataset ---
