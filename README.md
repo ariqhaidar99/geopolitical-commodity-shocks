@@ -2,7 +2,7 @@
 
 An empirical, multi-stage quantitative model analyzing price transmission elasticities across the global energy-fertilizer-food value chain using 60+ years of World Bank "Pink Sheet" and Our World in Data (OWID) historical records. 
 
-*Read the full published analysis on [Impakter](https://impakter.com/hormuz-strait-blockade-how-energy-shocks-feed-into-fertilizer-and-food-prices/).*
+*Read the full [How Energy Shocks Feed Into Fertilizer and Food Prices](https://impakter.com/hormuz-strait-blockade-how-energy-shocks-feed-into-fertilizer-and-food-prices/) article and [The Hidden Price of Oil](https://impakter.com/the-hidden-price-of-oil-how-crude-shapes-the-cost-of-everything/) article on Impakter.com.*
 
 ---
 
