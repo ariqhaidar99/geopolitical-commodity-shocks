@@ -18,16 +18,16 @@ Modern agricultural yields rely heavily on energy-intensive chemical synthesis (
 ### 1. The Global Price Transmission Network
 By calculating Pearson correlation coefficients across 13 distinct asset classes, the macro network illustrates a powerful relationship running from upstream inputs to retail commodities. High-density connections ($r > 0.85$) bind European Natural Gas directly to Urea synthesis and Maize pricing.
 
-![Price Transmission Heatmap](main/agricultural_correlation_heatmap.png)
+![Price Transmission Heatmap](agricultural_correlation_heatmap.png)
 
 ### 2. Historical Shock Comparison: Pre vs. Peak Prices
 To ground this framework in historical precedents, this panel benchmarks baseline pricing environments against peak crisis metrics across core commodity layers during the **2008 Financial Crisis** and the **2022 Russia-Ukraine War**. The visualization illustrates exactly how downstream crop assets and intermediate inputs mirror major upstream energy disruptions during a systemic supply shock.
 
-![Historical Shock Comparison](main/figures/hormuz_core_shocks.png)
+![Historical Shock Comparison](figures/hormuz_core_shocks.png)
 
 ### 3. Crop Yields vs. Fertilizer Intensification
 Using raw global agricultural data from 1961 to the present, our visualization confirms that staple yields closely track raw chemical nutrient applications, while showing independent movements relative to changes in land boundaries.
 
-![Fertilizer and Crop Yield Correlation](main/crop_yield_vs_fertilizer.png)
+![Fertilizer and Crop Yield Correlation](crop_yield_vs_fertilizer.png)
 
 ---
