@@ -1,8 +1,7 @@
 # ==============================================================================
-# Script: 04_macro_nexus_heatmaps.R
-# Project: macro-commodity-transmission
+# Title: World Bank Pink Sheet Energy, Industries, and Commodities Price Analysis
 # Author: Ariq Haidar
-# Description: Chapter 2 - Unifies and filters World Bank "Pink Sheet" Industry 
+# Description: Chapter 2 - Unifies and filters the World Bank "Pink Sheet" Industry 
 #              and Commodity datasets to map and visualize the Cross-Asset 
 #              Energy Nexus (Metals, Softs, Meats, Timber, and Rubber).
 # Requirements: dplyr, ggplot2, readr, reshape2, extrafont
